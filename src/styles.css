@@ -1,0 +1,45 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #000000;
+}
+
+#info {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  background: #181c20;
+  color: #8c92a4;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+  pointer-events: none;
+  font-family: var(--leva-fonts-mono);
+  transform: translateX(-50%);
+  width: fit-content;
+  transition: all .3s ease;
+}
+
+.annotation {
+  transform: translate3d(calc(50%), calc(-50%), 0);
+  text-align: left;
+  background: #181c20;
+  color: #8c92a4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  user-select: none;
+  font-family: var(--leva-fonts-mono);
+}
+
+.annotation::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  height: 2px;
+  width: 30px;
+  background: #181c20;
+}
